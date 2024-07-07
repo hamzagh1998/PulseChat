@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "PulseChat",
-    "slug": "PulseChat",
+    "slug": "pulsechat",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -38,6 +38,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "bfd4b99d-180b-47de-a11e-d9ff41174105"
+      }
+    },
+    "owner": "pulsetech"
   }
 }
