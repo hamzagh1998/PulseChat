@@ -4,7 +4,7 @@ export const lightTheme = {
   ...MD3LightTheme,
   colors: {
     ...MD3LightTheme.colors,
-    primary: "#ff0000",
+    primary: "#7289da",
     background: "#ffffff",
     surface: "#ffffff",
     text: "#000000",

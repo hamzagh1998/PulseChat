@@ -63,6 +63,6 @@ const styles = StyleSheet.create({
     position: "absolute", // Add this line
     width: 100,
     height: 4,
-    backgroundColor: "#ff0000",
+    backgroundColor: "#7289da",
   },
 });

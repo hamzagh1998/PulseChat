@@ -2,7 +2,11 @@ import React from "react";
 import { useTheme } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-export function SafeAreaVew({ children }: { children?: React.ReactNode }) {
+export function SafeAreaViewContainer({
+  children,
+}: {
+  children?: React.ReactNode;
+}) {
   const { colors } = useTheme();
 
   return (
