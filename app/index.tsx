@@ -4,7 +4,11 @@ import { View } from "react-native";
 import { useTheme } from "react-native-paper";
 import auth, { FirebaseAuthTypes } from "@react-native-firebase/auth";
 
+import { storage } from "@/hooks/store/mkkv-store";
+
 import { SplashScreen } from "@/components/splash-screen";
+
+import { AUTH, ONBOARDING } from "@/constants/routes";
 
 export default function Index() {
   const { colors } = useTheme();
@@ -35,7 +39,12 @@ export default function Index() {
 
   useEffect(() => {
     if (!initializing && !user) {
-      router.replace("/auth/signin");
+      const isOnboardingCompleted = storage.getBoolean("isOnboardingCompleted");
+      if (isOnboardingCompleted) {
+        router.replace(AUTH);
+      } else {
+        router.replace(ONBOARDING);
+      }
     }
   }, [initializing, user]);
 

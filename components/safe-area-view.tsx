@@ -1,6 +1,9 @@
 import React from "react";
 import { useTheme } from "react-native-paper";
-import { SafeAreaView } from "react-native-safe-area-context";
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from "react-native-safe-area-context";
 
 export function SafeAreaViewContainer({
   children,
@@ -8,16 +11,18 @@ export function SafeAreaViewContainer({
   children?: React.ReactNode;
 }) {
   const { colors } = useTheme();
+  const { top } = useSafeAreaInsets();
 
   return (
-    <SafeAreaView style={containerStyle(colors.background)}>
+    <SafeAreaView style={containerStyle(colors.background, top)}>
       {children}
     </SafeAreaView>
   );
 }
 
-const containerStyle = (bgColor: string) => ({
+const containerStyle = (bgColor: string, pt: number) => ({
   flex: 1,
   backgroundColor: bgColor,
   padding: 12,
+  paddingTop: pt,
 });

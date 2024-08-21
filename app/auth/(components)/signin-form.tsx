@@ -1,7 +1,9 @@
-import { Spacer } from "@/components/spacer";
 import { useState } from "react";
+import { router } from "expo-router";
 import { View, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 import { Button, Divider, Text, TextInput, useTheme } from "react-native-paper";
+
+import { Spacer } from "@/components/spacer";
 
 export function SigninForm() {
   const colors = useTheme().colors;
@@ -10,14 +12,7 @@ export function SigninForm() {
 
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-      <View style={styles.rowContainer}>
-        <Text>Don't have an account? </Text>
-        <TouchableOpacity>
-          <Text variant="bodyLarge" style={{ color: colors.primary }}>
-            Sign up
-          </Text>
-        </TouchableOpacity>
-      </View>
+      <View style={styles.rowContainer}></View>
       <View style={styles.inner}>
         <Spacer marginBottom={24} marginTop={24}>
           <Text variant="labelSmall">Email*</Text>
@@ -52,44 +47,15 @@ export function SigninForm() {
             }
           />
         </Spacer>
-        <Spacer marginBottom={12}>
-          <TouchableOpacity>
-            <Text
-              variant="labelSmall"
-              style={{ textAlign: "right", color: colors.primary }}
-            >
-              Forgot your password?
-            </Text>
-          </TouchableOpacity>
-        </Spacer>
         <Spacer marginBottom={12} marginTop={24}>
           <Button
             textColor="#fff"
             mode="contained"
             onPress={() => console.log("Pressed")}
           >
-            Sign in
+            Enter
           </Button>
         </Spacer>
-        <Spacer marginBottom={12} marginTop={12}>
-          <View style={styles.rowContainer}>
-            <Divider style={styles.divider} />
-            <Text variant="labelSmall" style={styles.dividerText}>
-              Or Sign in with
-            </Text>
-            <Divider style={styles.divider} />
-          </View>
-        </Spacer>
-        <Button
-          style={{ width: "100%" }}
-          textColor="#000"
-          buttonColor="#fff"
-          mode="outlined"
-          onPress={() => console.log("Pressed")}
-          icon="google"
-        >
-          Google
-        </Button>
       </View>
     </ScrollView>
   );
@@ -120,5 +86,3 @@ const styles = StyleSheet.create({
     marginHorizontal: 8,
   },
 });
-
-export default SigninForm;
