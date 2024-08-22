@@ -14,15 +14,15 @@ const slides = [
   },
   {
     key: 2,
-    title: "Allow permessions",
-    text: "Other cool stuff",
+    title: "Allow permissions",
+    text: "To help us set up your account, and help you find people you know faster. PulseChat will request these permissions.",
     label: "permissions",
   },
   {
     key: 3,
     title: "Register your account",
-    text: "I'm already out of descriptions\n\nLorem ipsum bla bla bla",
-    label: "register",
+    text: "Enter your full name and phone number to get started",
+    label: "phone-num",
   },
   {
     key: 4,

@@ -32,7 +32,7 @@ export function Paginator({
         disabled={currentIndex === 0}
         onPress={() => onNavigate("left")}
       >
-        Previous
+        Back
       </Button>
       <View
         style={{

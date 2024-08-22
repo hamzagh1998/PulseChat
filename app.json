@@ -15,11 +15,22 @@
     "ios": {
       "googleServicesFile": "./GoogleService-Info.plist",
       "supportsTablet": true,
-      "bundleIdentifier": "com.pulsechat"
+      "bundleIdentifier": "com.pulsechat",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app helps users find and connect with people nearby.",
+        "NSCameraUsageDescription": "This app requires access to the camera to take photos.",
+        "NSContactsUsageDescription": "This app requires access to your contacts to help you connect with people you know."
+      }
     },
     "android": {
       "googleServicesFile": "./google-services.json",
       "package": "com.pulsechat",
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "READ_CONTACTS"
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -47,6 +58,6 @@
         "projectId": "bfd4b99d-180b-47de-a11e-d9ff41174105"
       }
     },
-    "owner": "pulsetech"
+    "owner": "Hamza Ghenimi"
   }
 }
